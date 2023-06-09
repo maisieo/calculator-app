@@ -30,6 +30,13 @@ window.onload = function () {
       case "=":
         if (output !== "") {
           output = eval(output);
+          if (
+            Number.isFinite(output) &&
+            output % 1 !== 0 &&
+            output.toString().split(".")[1].length > 5
+          ) {
+            output = output.toFixed(5);
+          }
         }
         break;
       case "RESET":
@@ -50,6 +57,7 @@ window.onload = function () {
     }
     display.textContent = output || 0;
   };
+
 
   /*Add a click event listener to each button that calls the calculate function */
   buttons.forEach((button) => {
