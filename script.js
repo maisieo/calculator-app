@@ -1,7 +1,7 @@
 window.onload = function () {
   let display = document.querySelector(".output-number");
   let operators = ["*", "/", "x", "-", "+", "="];
-  let output = " ";
+  let output = "";
   let buttons = document.querySelectorAll(".calculator-btn");
   let toggle1 = document.querySelector(".toggle-1");
   let toggle2 = document.querySelector(".toggle-2");
