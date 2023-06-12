@@ -222,7 +222,15 @@ button.calculator-btn.span-2 {
 /*TABLET & MOBILE STYLES */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* CSS rules for tablet screens */
+    .container {
+            padding: 125px 215px;
+        }
+    
+        .calculator-btn {
+            padding: 16px;
+            min-width: 10px;
+            font-size: 18px;
+        }
 }
 
 @media screen and (max-width: 767px) {

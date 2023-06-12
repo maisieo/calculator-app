@@ -8,10 +8,32 @@ window.onload = function () {
   let toggle3 = document.querySelector(".toggle-3");
   let body = document.querySelector("body");
 
+
+
+  //Function
+  //loops through all the inputs in the switch-toggle class
+  //for each input, add a class based on position - toggle 1
+  // then add an event listener that removes all classes and then adds the class called 'theme' + number
+
+  let addToggleClasses = () => {
+    let inputs = document.querySelectorAll("input");
+    inputs.forEach((input, index) => {
+      let toggleClass = `toggle-${index + 1}`;
+      let themeClass = `theme-${index + 1}`;
+      input.classList.add(toggleClass);
+      input.addEventListener("click", () => {
+        document.body.classList.remove(...document.body.classList);
+        document.body.classList.add(themeClass);
+      });
+    });
+  };
+
+  
+
+  //turn this into a single function - make it more expandable//
   toggle1.addEventListener("click", () => {
     body.classList.remove("theme-2", "theme-3");
       body.classList.add("theme-1");
-      console.log(body.classList)
   });
 
   toggle2.addEventListener("click", () => {
@@ -45,7 +67,7 @@ window.onload = function () {
       case "DEL":
         output = output.toString().slice(0, -1);
         break;
-
+      
       default:
         if (operators.includes(btnValue)) {
           if (output === "" || operators.includes(output.slice(-1))) {
