@@ -4,6 +4,7 @@ window.onload = function () {
   let output = "";
   let buttons = document.querySelectorAll(".calculator-btn");
 
+  // Function to add toggle classes and classes to body
   let addToggleClasses = () => {
     let inputs = document.querySelectorAll("input");
     inputs.forEach((input, index) => {
@@ -16,15 +17,17 @@ window.onload = function () {
       });
     });
   };
-
+// Call the addToggle function
   addToggleClasses();
 
   /* Function to perform calculations with various button clicks */
   let calculate = (btnValue) => {
     switch (btnValue) {
+      //If the "=" button is clicked, evaluate the expression in output variable
       case "=":
         if (output !== "") {
           output = eval(output);
+          //If result is a decimal with more than 5 decimal places, round to 5 decimal places
           if (
             Number.isFinite(output) &&
             output % 1 !== 0 &&
@@ -34,22 +37,26 @@ window.onload = function () {
           }
         }
         break;
+      //If "RESET" is clicked, reset output to "0"
       case "RESET":
         output = "0";
         break;
+      //If "DEL" is clicked, remove last character from output vaiable
       case "DEL":
         output = output.toString().slice(0, -1);
         break;
-
+        //Check operator that is clicked is not first character in output variable
       default:
         if (operators.includes(btnValue)) {
           if (output === "" || operators.includes(output.slice(-1))) {
             return;
           }
         }
+        //if it isn't, add clicked button to output variable
         output += btnValue;
         break;
     }
+    //Update the display with the current
     display.textContent = output || 0;
   };
 
