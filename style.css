@@ -223,13 +223,12 @@ button.calculator-btn.span-2 {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
-            padding: 125px 215px;
+            padding: 3rem 10rem;
         }
     
         .calculator-btn {
             padding: 16px;
             min-width: 10px;
-            font-size: 18px;
         }
 }
 
@@ -241,6 +240,6 @@ button.calculator-btn.span-2 {
         .calculator-btn {
             padding: 16px;
             min-width: 10px;
-            font-size: 18px;
+            font-size:24px;
         }
 }
