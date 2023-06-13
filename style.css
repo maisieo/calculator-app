@@ -76,7 +76,7 @@ p {
 }
 
 .container {
-    padding: 8% 31%;
+    padding: 8% 35%;
 }
 
 /*Header section*/
@@ -91,6 +91,10 @@ p {
 .header {
     width: 200px;
     align-self: flex-end;
+}
+
+.header > p {
+    font-size: 26px;
 }
 
 /*Colour preferences section*/
@@ -161,7 +165,7 @@ p {
 .toggle-title {
     align-self: flex-end;
     margin-right: 20px;
-    font-size: 10px;
+    font-size: 19px;
 }
 
 .switch-toggle {
