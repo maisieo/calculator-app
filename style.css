@@ -157,6 +157,14 @@ p {
     padding: 8px 0;
 }
 
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-gap: 15px;
+        padding: 21px;
+    }
+    
+}
+
 
 
 /*TOGGLE BUTTON STYLES*/
